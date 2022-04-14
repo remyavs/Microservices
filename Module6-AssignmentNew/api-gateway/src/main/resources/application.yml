@@ -1,0 +1,44 @@
+server:
+  port: 8989
+
+spring:
+  application:
+    name: gateway
+
+  cloud:
+    gateway:
+      discovery.locator:
+        enabled: false
+        lowerCaseServiceId: true
+      routes:
+        - id: student-service
+          uri: lb://student-service
+          predicates:
+            - Path=/student/**
+        - id: fee-service
+          uri: lb://fee-service
+          predicates:
+            - Path=/fee/**
+        - id: oauth-server
+          uri: lb://OAUTH-SERVER
+          predicates:
+            - Path=/oauth-server/**
+          filters:
+            - RewritePath=/oauth-server/(?<path>.*), /$\{path}
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+  instance:
+    hostname: localhost
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
