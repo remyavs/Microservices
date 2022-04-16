@@ -6,7 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/Module6-Assignment.iml" filepath="$PROJECT_DIR$/.idea/Module6-Assignment.iml" />
       <module fileurl="file://$PROJECT_DIR$/StudentManagement/StudentManagement.iml" filepath="$PROJECT_DIR$/StudentManagement/StudentManagement.iml" />
       <module fileurl="file://$PROJECT_DIR$/api-gateway/cloud-gateway.iml" filepath="$PROJECT_DIR$/api-gateway/cloud-gateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/oauth-server/oauth-server/oauth-server.iml" filepath="$PROJECT_DIR$/oauth-server/oauth-server/oauth-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oauth-server/oauth-server.iml" filepath="$PROJECT_DIR$/oauth-server/oauth-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-registry/service-registry.iml" filepath="$PROJECT_DIR$/service-registry/service-registry.iml" />
     </modules>
   </component>
