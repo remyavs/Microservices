@@ -20,7 +20,7 @@ MAINTAINER remyavs.21@gmail.com
 EXPOSE 8761
 
 #default command
-CMD java -jar /data/service-registry-0.0.1-SNAPSHOT.jar
+CMD java -Dvertx.disableDnsResolver=true -jar /data/service-registry-0.0.1-SNAPSHOT.jar
 
 #copy hello world to docker image from builder image
 

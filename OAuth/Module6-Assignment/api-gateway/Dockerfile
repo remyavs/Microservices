@@ -20,8 +20,7 @@ MAINTAINER remyavs.21@gmail.com
 EXPOSE 8989
 
 #default command
-CMD java -jar /data/gateway/cloud-gateway-0.0.1-SNAPSHOT.jar
-
+CMD java -jar -Dvertx.disableDnsResolver=true /data/gateway/cloud-gateway-0.0.1-SNAPSHOT.jar
 #copy hello world to docker image from builder image
 
 COPY --from=maven_build /tmp/gateway/target/cloud-gateway-0.0.1-SNAPSHOT.jar  /data/gateway/cloud-gateway-0.0.1-SNAPSHOT.jar

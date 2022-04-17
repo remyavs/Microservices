@@ -12,15 +12,15 @@ RUN mvn package
 
 #pull base image
 
-FROM openjdk
+FROM openjdk:11.0.14.1
 
 #maintainer
 MAINTAINER remyavs.21@gmail.com
 #expose port 8080
-EXPOSE 8085
+EXPOSE 9000
 
 #default command
-CMD java -jar /data/oauth/oauth-server-0.0.1-SNAPSHOT.jar
+CMD java -Dvertx.disableDnsResolver=true -jar /data/oauth/oauth-server-0.0.1-SNAPSHOT.jar
 
 #copy hello world to docker image from builder image
 
